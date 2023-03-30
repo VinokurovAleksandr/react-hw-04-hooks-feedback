@@ -1,0 +1,10 @@
+.feedback_btn {
+    padding: 10px;
+    margin-left: 5px;
+    background-color: rgb(2, 47, 47);
+    color: #ffff;
+}
+.feedback_value {
+    display: block;
+    margin-bottom: 5px;
+}
