@@ -8,12 +8,31 @@ class Feedback extends React.Component {
         bad: 0
     };
 
+
+    // якщо потрібно передати не оновуючить на попередньом значенні то це обєкт  --  handleGood () {this.setState({1234})}
+    // Якщо потрібно передати виходячи з попереднього значенні то цк функція  ---  handleGood = () => {};
+
     handleGood = () => {
-        this.setState({good: +1,});
+        this.setState(prevState => ({
+              good: prevState.good +1
+        })
+        );
     };
     handleNeutral = () => {
+        this.setState((prevState => ({
+            neutral: prevState.neutral + 1
+        })))
     };
     handleBab = () => {
+        this.setState((prevState => ({
+            bad: prevState.bad +1
+        })))
+    };
+    countTotalFeedback = () => {
+        
+    };
+    countPositiveFeedbackPercentage = () => {
+
     };
 
 
@@ -50,8 +69,10 @@ class Feedback extends React.Component {
                     </h2>
                     
                     <p className={style.feedback_value}>Good: {this.state.good} </p>
-                    <p className={style.feedback_value}>Neutral:{this.state.neutral}</p>
+                    <p className={style.feedback_value}>Neutral: {this.state.neutral}</p>
                     <p className={style.feedback_value}>Bad: {this.state.bad}</p>
+                    <p className={style.feedback_value}>Total: </p>
+                    <p className={style.feedback_value}>Positive feedback: %</p>
 
                 </div>
             </div>
