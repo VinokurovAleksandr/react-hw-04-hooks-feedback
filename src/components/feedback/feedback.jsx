@@ -1,11 +1,20 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import style from '../feedback/style.module.css';
+// import Controls from './Controls';
 
 class Feedback extends React.Component {
+    // static defaultProps = {
+    //     initialValue: 0,
+    // };
+    // static propTypes = { 
+        
+    // }
+
     state = {
         good: 0,
         neutral: 0,
-        bad: 0
+        bad: 0,
     };
 
 
@@ -38,47 +47,59 @@ class Feedback extends React.Component {
 
     render() { 
         return (
-            <div>
-                <h1>Place leave feedback</h1>
-
-                <button
-                    className={style.feedback_btn}
-                    type='button'
-                    name='good'
-                     onClick={this.handleGood}>
-                    good
-                </button>
-                <button
-                    className={style.feedback_btn}
-                    type='button'
-                    name='neutral'
+           <div>
+        <h1>Place leave feedback</h1>
+        <div>
+            <button
+                className={style.feedback_btn}
+                type='button'
+                name='good'
+                onClick={this.handleGood}>
+                good
+            </button>
+            <button
+                className={style.feedback_btn}
+                type='button'
+                name='neutral'
                 onClick={this.handleNeutral}>
-                    neutral
-                </button>
-                <button
-                    className={style.feedback_btn}
-                    type='button'
-                    name='bad'
-                    onClick={this.handleBab}
-                >
-                    bad
-                </button>
-                <div>
-                    <h2>
-                        Statistics
-                    </h2>
-                    
-                    <p className={style.feedback_value}>Good: {this.state.good} </p>
-                    <p className={style.feedback_value}>Neutral: {this.state.neutral}</p>
-                    <p className={style.feedback_value}>Bad: {this.state.bad}</p>
-                    <p className={style.feedback_value}>Total: </p>
-                    <p className={style.feedback_value}>Positive feedback: %</p>
-
-                </div>
+                neutral
+            </button>
+            <button
+                className={style.feedback_btn}
+                type='button'
+                name='bad'
+                onClick={this.handleBab}
+            >
+                bad
+            </button>
+        </div>
+                
+        <div>
+            <h2>
+                Statistics
+            </h2>
+        </div>
+            <div>
+                <ul>
+                    <li className={style.feedback_value}>Good: {this.state.good} </li>
+                    <li className={style.feedback_value}>Neutral: {this.state.neutral}</li>
+                    <li className={style.feedback_value}>Bad: {this.state.bad}</li>
+                    <li className={style.feedback_value}>Total: </li>
+                    <li className={style.feedback_value}>Positive feedback: %</li>
+                </ul>
             </div>
+                    
+
+        
+    </div>
+               
+                
+           
            
         );
     }
 };
  
 export default Feedback;
+
+
