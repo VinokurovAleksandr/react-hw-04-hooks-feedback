@@ -1,15 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import style from '../feedback/style.module.css';
 // import Controls from './Controls';
 
 class Feedback extends React.Component {
-    // static defaultProps = {
-    //     initialValue: 0,
-    // };
-    // static propTypes = { 
-        
-    // }
 
     state = {
         good: 0,
@@ -88,14 +82,7 @@ class Feedback extends React.Component {
                     <li className={style.feedback_value}>Positive feedback: %</li>
                 </ul>
             </div>
-                    
-
-        
     </div>
-               
-                
-           
-           
         );
     }
 };
