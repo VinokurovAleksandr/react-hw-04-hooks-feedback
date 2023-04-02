@@ -1,6 +1,6 @@
 import React from 'react';
 import style from '../FeedbackOptions/FeedbackOptions.module.css';
-
+import PropTypes from 'prop-types';
 
 const FeedbackOptions = ({handleGood, handleNeutral, handleBab}) => {
     return (
@@ -32,3 +32,7 @@ const FeedbackOptions = ({handleGood, handleNeutral, handleBab}) => {
 }
 
 export default FeedbackOptions;
+
+FeedbackOptions.propTypes = {
+    
+}

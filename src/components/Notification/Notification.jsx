@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types';
 import style from '../Notification/Notification.module.css'
 
-export default Notification = ({ message }) => {
+export default function Notification  ({ message }) {
     return (
             <p className={style.title}> {message}</p>
     )
