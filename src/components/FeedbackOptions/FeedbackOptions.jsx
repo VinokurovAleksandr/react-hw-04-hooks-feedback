@@ -34,5 +34,7 @@ const FeedbackOptions = ({handleGood, handleNeutral, handleBab}) => {
 export default FeedbackOptions;
 
 FeedbackOptions.propTypes = {
-    
+    handleGood : PropTypes.func.isRequired,
+    handleNeutral : PropTypes.func.isRequired,
+    handleBab : PropTypes.func.isRequired,
 }
