@@ -1,0 +1,32 @@
+.good_feedback_btn {
+    padding: 10px;
+    margin-left: 5px;
+    background-color: rgb(12, 220, 40);
+    color: #ffff;
+    border-radius: 10px;
+    width: 60px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.neutral_feedback_btn {
+     padding: 10px;
+    margin-left: 5px;
+    background-color: yellow;
+    color: black;
+    border-radius: 10px;
+    width: 60px;
+    cursor: pointer;
+    text-align: center;
+}
+ 
+.bad_feedback_btn {
+    padding: 10px;
+        margin-left: 5px;
+        background-color: red;
+        color: #ffff;
+        border-radius: 10px;
+        width: 60px;
+        text-align: center;
+        cursor: pointer;
+}
