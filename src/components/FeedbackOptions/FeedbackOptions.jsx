@@ -2,31 +2,22 @@ import React from 'react';
 import style from '../FeedbackOptions/FeedbackOptions.module.css';
 import PropTypes from 'prop-types';
 
-const FeedbackOptions = ({handleGood, handleNeutral, handleBab}) => {
+const FeedbackOptions = ({options,onLeaveFeedback,}) => {
     return (
         <div>
-            <button
-                className={style.good_feedback_btn}
+            {options.map(option => {
+                return ( 
+                  <button
+                className={style.feedback_btn}
                 type='button'
                 name='good'
-                onClick={handleGood}>
-                good
-            </button>
-            <button
-                className={style.neutral_feedback_btn}
-                type='button'
-                name='neutral'
-                onClick={handleNeutral}>
-                neutral
-            </button>
-            <button
-                className={style.bad_feedback_btn}
-                type='button'
-                name='bad'
-                onClick={handleBab}
-            >
-                bad
-            </button>
+                key={option}
+                onClick={() => onLeaveFeedback(option)}>
+                {option}
+            </button> 
+               )
+           })}
+         
         </div>
 )
 }
@@ -34,7 +25,6 @@ const FeedbackOptions = ({handleGood, handleNeutral, handleBab}) => {
 export default FeedbackOptions;
 
 FeedbackOptions.propTypes = {
-    handleGood : PropTypes.func.isRequired,
-    handleNeutral : PropTypes.func.isRequired,
-    handleBab : PropTypes.func.isRequired,
+    options: PropTypes.arrayOf(PropTypes.string.isRequired),
+    onLeaveFeedback:PropTypes.func.isRequired,
 }

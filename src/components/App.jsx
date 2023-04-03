@@ -19,22 +19,22 @@ class App extends Component {
     // Якщо потрібно передати виходячи з попереднього значенні то цк функція  ---  handleGood = () => {};
 
 
-    handleGood = () => {
+    onLeaveFeedback = state => {
         this.setState(prevState => ({
-              good: prevState.good +1,
+              [state]: prevState[state] +1,
         })
         );
     };
-    handleNeutral = () => {
-        this.setState((prevState => ({
-            neutral: prevState.neutral + 1
-        })))
-    };
-    handleBab = () => {
-        this.setState((prevState => ({
-            bad: prevState.bad +1
-        })))
-    };
+    // handleNeutral = () => {
+    //     this.setState((prevState => ({
+    //         neutral: prevState.neutral + 1
+    //     })))
+    // };
+    // handleBab = () => {
+    //     this.setState((prevState => ({
+    //         bad: prevState.bad +1
+    //     })))
+    // };
     countTotalFeedback () {
         const { good, neutral, bad } = this.state;
         
@@ -57,9 +57,10 @@ class App extends Component {
     
                 <Section title="Place leave feedback">
                     <FeedbackOptions
-                    handleGood={this.handleGood}
-                    handleNeutral={this.handleNeutral}
-                    handleBab={this.handleBab}
+                    options={Object.keys(this.state)}
+                        handleGood={this.handleGood}
+                        onLeaveFeedback={this.onLeaveFeedback}
+                
                 />
                 </Section>
 
