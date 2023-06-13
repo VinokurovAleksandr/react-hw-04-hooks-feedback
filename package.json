@@ -1,8 +1,8 @@
 {
-  "name": "react-02-feedback",
+  "name": "react-hw-04-hooks-feedback",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://VinokurovAleksandr.github.io/react-02-feedback/",
+  "homepage": "https://VinokurovAleksandr.github.io/react-hw-04-hooks-feedback/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
