@@ -25,16 +25,7 @@ class App extends Component {
         })
         );
     };
-    // handleNeutral = () => {
-    //     this.setState((prevState => ({
-    //         neutral: prevState.neutral + 1
-    //     })))
-    // };
-    // handleBab = () => {
-    //     this.setState((prevState => ({
-    //         bad: prevState.bad +1
-    //     })))
-    // };
+  
     countTotalFeedback () {
         const { good, neutral, bad } = this.state;
         
