@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 import Statistics from './Staticsics/Statistics';
 import Section from './Section/Section';
 import Notification from './Notification/Notification';
+
 
 
 const App = () => {
@@ -15,6 +17,7 @@ const App = () => {
     });
 
     const onLeaveFeedback = (type) => {
+        console.log(onLeaveFeedback);
         
         setFeedback((prevState) => ({
             ...prevState,
@@ -64,3 +67,8 @@ const App = () => {
 };
 
 export default App;
+
+
+App.propTypes = {
+    onLeaveFeedback: PropTypes.string.isRequired,
+};
